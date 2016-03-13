@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow Root:Method & Properties example</title>
+</head>
+<body>
+<div id="aShadowHost"></div>
+<template id="selectorTemplate">
+    <style>
+        :host input {
+            background-color: lightyellow;
+        }
+
+        :host .labelClass {
+            color: blue;
+        }
+    </style>
+    <form action="">
+        <label for="nameElement" class="labelClass">Name</label>
+        <input id="nameElement" type="text" value="Sandeep" placeholder="Enter your name" autofocus>
+    </form>
+</template>
+<script>
+    (function () {
+        'use strict';
+        var aShadowHost     = document.getElementById('aShadowHost'),
+            shadowRoot1     = aShadowHost.createShadowRoot(),
+            shadowRoot2     = aShadowHost.createShadowRoot(),
+            templateContent = document.querySelector('#selectorTemplate').content,
+            templateNodes   = document.importNode(templateContent, true);
+        shadowRoot1.innerText = 'Inside shasowRoot1';
+        shadowRoot2.appendChild(templateNodes);
+        shadowRoot2.getElementById('nameElement').select();
+        console.log(shadowRoot2.getElementById('nameElement'));
+        console.log(shadowRoot2.getElementsByClassName('labelClass'));
+        console.log(shadowRoot2.getElementsByTagName('label'));
+        console.log(shadowRoot2.getElementsByTagNameNS('*', 'label'));
+        console.log(shadowRoot2.getSelection());
+        console.log(shadowRoot2.elementFromPoint(8, 9));
+        console.log(shadowRoot2.activeElement);
+        console.log(shadowRoot2.host);
+        console.log(shadowRoot2.olderShadowRoot);
+        console.log(shadowRoot2.syleSheets);
+        console.log(shadowRoot2.innerHTML);
+    }());
+</script>
+</body>
+</html>

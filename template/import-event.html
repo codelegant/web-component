@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Import Event</title>
+</head>
+<body>
+<script>
+    'use strict';
+    function handleSuccess(e) {
+        var targetLink         = e.target,
+            externalDocument   = targetLink.import,
+            headerElement      = externalDocument.querySelector('h1'),
+            cloneHeaderElement = headerElement.cloneNode(true);
+        document.body.appendChild(cloneHeaderElement);
+    }
+
+    function handleError() {
+        alert('error in import');
+    }
+</script>
+<link rel="import" href="message.html" onload="handleSuccess(event)" onerror="handleError(event)">
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var objectPro = Object.create(HTMLElement.prototype);
+    objectPro.createdCall= function () {
+        console.log('Instance is created');
+    };
+    console.log(objectPro);
+</script>
+</body>
+</html>

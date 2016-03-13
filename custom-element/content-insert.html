@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Content Insert</title>
+
+    <template id="selectorTemplate">
+        <style>
+            :host b {
+                margin: 0 10px;
+            }
+
+            :host ::content b.fruit {
+                color: green;
+            }
+
+            :host ::content b.flower {
+                color: orange;
+            }
+        </style>
+        <h1>Fruit
+            <content select="b.fruit"></content>
+        </h1>
+        <h1>Flower
+            <content select="b.flower"></content>
+        </h1>
+    </template>
+    <script>
+        var objectPrototype = Object.create(HTMLElement.prototype);
+        objectPrototype.createdCallback = function () {
+            var shadow          = this.createShadowRoot(),
+                templateContent = document.getElementById('selectorTemplate').content,
+                templateNodes   = document.importNode(templateContent, true);
+            shadow.appendChild(templateNodes);
+        };
+        var myNameElement = document.registerElement('selector-component', {
+            prototype: objectPrototype
+        });
+    </script>
+</head>
+<body>
+<selector-component>
+    <b class="fruit">Apple </b>
+    <b class="flower">Rose </b>
+    <b class="fruit">Orange </b>
+    <b class="flower">Lotus </b>
+</selector-component>
+</body>
+</html>

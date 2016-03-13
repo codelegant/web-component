@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Import</title>
+</head>
+<body>
+<div id="container"></div>
+<template id="aTemplate">
+    <h1>Template is activated using importNode method</h1>
+</template>
+<script>
+    (function () {
+        'use strict';
+        var isImportSupporte = function () {
+            var link = document.createElement('link');
+            return 'import' in link;
+        };
+        alert(isImportSupporte());
+    }());
+</script>
+</body>
+</html>

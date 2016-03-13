@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>延迟加载</title>
+</head>
+<body>
+<h1 id="message"></h1>
+<template id="aTemplate">
+    <img src="https://kyfw.12306.cn/otn/resources/images/logo.png" alt="" id="profileImage">
+    <script>
+        alert('This is a script.');
+    </script>
+</template>
+</body>
+<script>
+    (function () {
+        'use strict';
+        var imageElement   = document.getElementById('profileImage'),
+            messageElement = document.getElementById('message');
+        messageElement.innerHTML = 'IMG element ' + imageElement;
+    }());
+</script>
+</html>
