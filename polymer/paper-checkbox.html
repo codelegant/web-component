@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper Checkbox</title>
+    <script src="../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../vendor/polymer/polymer.html">
+    <link rel="import" href="../vendor/core-label/core-label.html">
+    <link rel="import" href="../vendor/paper-checkbox/paper-checkbox.html">
+</head>
+<body>
+<core-label horizontal layout center>
+    <paper-checkbox for id="math_checkbox"></paper-checkbox>
+    <h1>Mathematics</h1>
+</core-label>
+<core-label horizontal layout center>
+    <paper-checkbox for checked id="comp_checkbox"></paper-checkbox>
+    <h1>Computer</h1>
+</core-label>
+<script>
+    (function () {
+        'use strict';
+        var mathCheckbox = document.getElementById('math_checkbox'),
+            compCheckbox = document.getElementById('comp_checkbox');
+        mathCheckbox.addEventListener('change', function (e) {
+            console.log('Change event fired');
+        });
+        compCheckbox.addEventListener('core-change', function (e) {
+            console.log('core-change event fired');
+        });
+    }());
+</script>
+</body>
+</html>
