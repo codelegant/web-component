@@ -1,0 +1,27 @@
+{
+  "name": "web-component",
+  "homepage": "https://github.com/codelegant/web-component",
+  "authors": [
+    "codelegant <laichuanfeng@hotmail.com>"
+  ],
+  "description": "web组件学习",
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "web-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.3.1"
+  }
+}
