@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Core Input</title>
+    <script src="../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../vendor/polymer/polymer.html">
+    <link rel="import" href="../vendor/core-input/core-input.html">
+</head>
+<body>
+<section>
+    <input type="text" is="core-input" id="H_CoreInput"
+           placeholder="Enter a Text" preventInvalidInput
+           onchange="changeHandler(this)" value="Default Value">
+</section>
+<script>
+    var changeHandler = function (self) {
+        console.log('Value: ' + self.value);
+        console.log('Before commit: ' + self.committedValue);
+        self.commit();
+        console.log('After commit: ' + self.committedValue);
+    }
+</script>
+</body>
+</html>

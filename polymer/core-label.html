@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Core Label</title>
+    <script src="../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../vendor/polymer/polymer.html">
+    <link rel="import" href="../vendor/core-label/core-label.html">
+    <link rel="import" href="../vendor/core-input/core-input.html">
+</head>
+<body>
+<section>
+    <core-label for="core_input">Student Name:</core-label>
+    <input type="text" is="core-input" id="core_input" placeholder="Enter Your Name">
+    <core-label>Student Subject:
+        <input type="text" is="core-input" placeholder="Enter Your Subject">
+    </core-label>
+</section>
+</body>
+</html>
