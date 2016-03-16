@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Filter</title>
+    <script src="../../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../../vendor/polymer/polymer.html">
+</head>
+<body>
+<template id="template_1" is="auto-binding">
+    <h1>{{student.name|sayHello}}</h1>
+</template>
+<script>
+    (function () {
+        'use strict';
+        var template1 = document.getElementById('template_1');
+        template1.student = {
+            name: 'Laichuanfeng'
+        };
+        template1.sayHello = function (inputString) {
+            return 'Hello ' + inputString;
+        };
+    }());
+</script>
+</body>
+</html>

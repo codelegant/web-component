@@ -1,0 +1,27 @@
+{
+  "name": "web-component",
+  "version": "1.0.0",
+  "description": "Web Component",
+  "main": "index.js",
+  "dependencies": {
+    "generator-polymer": "^1.2.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "#"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codelegant/web-component.git"
+  },
+  "keywords": [
+    "Web",
+    "Component"
+  ],
+  "author": "codelegant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codelegant/web-component/issues"
+  },
+  "homepage": "https://github.com/codelegant/web-component#readme"
+}
