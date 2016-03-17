@@ -1,0 +1,13 @@
+<link rel="import" href="hello-componet.html">
+<polymer-element name="say-good" extends="say-hello" constructor="SayGood" attributes="time">
+    <template>
+        <shadow>Good {{time}}</shadow>
+    </template>
+    <script>
+        Polymer({
+            created:function(){
+                this.time="Morning"
+            }
+        });
+    </script>
+</polymer-element>

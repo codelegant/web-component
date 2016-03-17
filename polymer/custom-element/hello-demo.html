@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Demo</title>
+    <script src="../../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../../vendor/polymer/polymer.html">
+    <link rel="import" href="hello-componet.html">
+</head>
+<body>
+<say-hello></say-hello>
+<say-hello mytext="Jonh"></say-hello>
+<script>
+    window.addEventListener('polymer-ready', function (e) {
+        var sayHello1 = new SayHello();
+        sayHello1.mytext = 'PolymerJs';
+        document.body.appendChild(sayHello1);
+    })
+</script>
+</body>
+</html>

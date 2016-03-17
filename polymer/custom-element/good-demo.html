@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good Dome</title>
+    <script src="../../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../../vendor/polymer/polymer.html">
+    <link rel="import" href="good-component.html">
+</head>
+<body>
+<say-good mytext="Laichuanfeng" time="Night"></say-good>
+<script>
+    window.addEventListener('polymer-ready', function (e) {
+        var sayGood1 = new SayGood();
+        sayGood1.mytext = '肖彩云';
+        sayGood1.time = '晚上';
+        document.body.appendChild(sayGood1);
+    })
+</script>
+</body>
+</html>
