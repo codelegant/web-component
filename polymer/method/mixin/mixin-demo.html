@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mixin Demo</title>
+    <script src="../../../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../../../vendor/polymer/polymer.html">
+    <link rel="import" href="common-mixin.html">
+    <link rel="import" href="print-hi-component.html">
+    <link rel="import" href="print-bye-component.html">
+</head>
+<body>
+<print-hi></print-hi>
+<print-bye></print-bye>
+<script>
+    window.addEventListener('polymer-ready', function (e) {
+        var printBye = new PrintBye(),
+            printHi  = new PrintHi(),
+            byeName  = printBye.printMyName(),
+            hiName   = printHi.printMyName();
+        console.info(printHi.printHi());
+        console.log(byeName);
+        console.log(hiName);
+    })
+</script>
+</body>
+</html>
