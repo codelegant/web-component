@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async</title>
+    <script src="../../../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../../../vendor/polymer/polymer.html">
+</head>
+<polymer-element name="my-text">
+    <template>
+        {{message}}
+    </template>
+    <script>
+        Polymer({
+            ready: function () {
+                this.message = '我要加薪';
+                this.async(function () {
+                    this.message += '--->(after 2 second)--->Bye'
+                }, null, 2000);
+            }
+        });
+    </script>
+</polymer-element>
+<body>
+<my-text></my-text>
+</body>
+</html>

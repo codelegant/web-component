@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Evening Demo</title>
+    <script src="../../../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../../../vendor/polymer/polymer.html">
+    <link rel="import" href="evening-component.html">
+</head>
+<body>
+<good-evening></good-evening>
+<script>
+    Polymer.forceReady();
+    Polymer.whenReady(function () {//whenPolymerReady方法也可以
+        console.log('Polymer is ready now');
+        Polymer('good-evening');
+    });
+</script>
+</body>
+</html>

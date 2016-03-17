@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Import Method</title>
+    <script src="../../../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../../../vendor/polymer/polymer.html">
+
+</head>
+<body>
+<template is="auto-binding" id="myTemplate">
+    <h1>Lucky number of the day is :{{myLuckyNumber}}</h1>
+</template>
+</body>
+<script>
+    Polymer.import(['number-detail.html'], function () {
+        var myTemplate = document.getElementById('myTemplate');
+        myTemplate.myLuckyNumber = luckNumber;
+    });
+</script>
+</html>

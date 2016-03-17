@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Morning Demo</title>
+    <script src="../../../vendor/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../../../vendor/polymer/polymer.html">
+    <link rel="import" href="morning-component.html">
+</head>
+<body>
+<good-morning></good-morning>
+<script>
+    var elementList = Polymer.waitingFor(),
+            length = elementList.length;
+    for (var i = 0; i < length; i++) {
+        var aElement = elementList[0];
+        console.log('Element names waiting registration are: ' + aElement.name);
+    }
+</script>
+</body>
+</html>
